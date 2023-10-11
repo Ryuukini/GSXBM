@@ -3,8 +3,11 @@ function bm() {
     var eingabe = document.getElementById("kuerzel").value;
     var eingabe2 = document.getElementById("techid").value;
     var a = document.getElementById("privat");
+    var b = document.getElementById("firma");
     let text = "javascript:void%20function(){javascript:(function(){var%20a={rep_cust__po:0,rep_cust__ref:0,rep_cust__addr1:3,rep_cust__z:4,rep_cust__ci:5,rep_cust__ph:6,rep_cust__em:8};(async%20function(){let%20b=await%20navigator.clipboard.readText(),c=b.split(%22;%22);if(10%3Ec.length)return%20void%20console.log(%22Fehler:%20Keine%20SAP%20Daten%20in%20der%20Zwischenablage%22);let%20d=c[2].split(%22%20%22,2);for(const%20b%20in%20c.push(d[0]||%22%22),c.push(d[1]||%22%22),a){const%20d=a[b];document.getElementById(b).value=c[d];let%20e=new%20Event(%22input%22);document.getElementById(b).dispatchEvent(e)}document.getElementById(%22rep_cust__fn%22).value=c[10]||%22%22,document.getElementById(%22rep_cust__ln%22).value=c[11]||%22%22,document.getElementById(%22rep_cust__po%22).value=c[0]+%22_kuerzel%22,document.getElementById(%22rep_cust__ref%22).value=c[0]+%22_kuerzel%22;let%20e=new%20Event(%22input%22);document.getElementById(%22rep_cust__fn%22).dispatchEvent(e),document.getElementById(%22rep_cust__ln%22).dispatchEvent(e),document.getElementById(%22rep_cust__po%22).dispatchEvent(e),document.getElementById(%22rep_cust__ref%22).dispatchEvent(e);let%20f=new%20Event(%22change%22);document.getElementById(%22rep_cust__class%22).value=%22DIRECT%22,document.getElementById(%22rep_cust__class%22).dispatchEvent(f);let%20g=new%20Event(%22change%22);document.getElementById(%22rep_tech%22).value=%22techid%22,document.getElementById(%22rep_tech%22).dispatchEvent(g)})(),console.log(%22Wieso%3F%22)})()}();"
     let newText = text.replace(/kuerzel/g, eingabe).replace(/techid/g, eingabe2);
+    let text2 = "javascript:void%20function(){javascript:(function(){var%20a={rep_cust__po:0,rep_cust__ref:0,rep_cust__addr1:3,rep_cust__z:4,rep_cust__ci:5,rep_cust__ph:6,rep_cust__em:8};(async%20function(){let%20b=await%20navigator.clipboard.readText(),c=b.split(%22;%22);if(10%3Ec.length)return%20void%20console.log(%22Fehler:%20Keine%20SAP%20Daten%20in%20der%20Zwischenablage%22);let%20d=c[2].split(%22%20%22,2);for(const%20b%20in%20c.push(d[0]||%22%22),c.push(d[1]||%22%22),a){const%20d=a[b];document.getElementById(b).value=c[d];let%20e=new%20Event(%22input%22);document.getElementById(b).dispatchEvent(e)}document.getElementById(%22rep_cust__company%22).value=c[2],document.getElementById(%22rep_cust__fn%22).value=%22N.A.%22,document.getElementById(%22rep_cust__ln%22).value=%22N.A.%22,document.getElementById(%22rep_cust__po%22).value=c[0]+%22kuerzel%22,document.getElementById(%22rep_cust__ref%22).value=c[0]+%22kuerzel%22;let%20e=new%20Event(%22input%22);document.getElementById(%22rep_cust__company%22).dispatchEvent(e),document.getElementById(%22rep_cust__fn%22).dispatchEvent(e),document.getElementById(%22rep_cust__ln%22).dispatchEvent(e),document.getElementById(%22rep_cust__po%22).dispatchEvent(e),document.getElementById(%22rep_cust__ref%22).dispatchEvent(e);let%20f=new%20Event(%22change%22);document.getElementById(%22rep_cust__class%22).value=%22INDIRECT%22,document.getElementById(%22rep_cust__class%22).dispatchEvent(f);let%20g=new%20Event(%22change%22);document.getElementById(%22rep_tech%22).value=%22techid%22,document.getElementById(%22rep_tech%22).dispatchEvent(g)})(),console.log(%22Wieso%3F%22)})()}();"
+    let newText2 = text2.replace(/kuerzel/g, eingabe).replace(/techid/g, eingabe2);
 
     if(eingabe == "") {  
         alert("Leer");  
@@ -16,6 +19,7 @@ function bm() {
     }
 
     a.href = newText;
+    b.href = newText2;
     document.getElementById("privat").removeAttribute("hidden");
     document.getElementById("firma").removeAttribute("hidden");
 
